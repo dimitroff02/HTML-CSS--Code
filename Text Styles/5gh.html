@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музикален Плеър</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Музикален Плеър</h1>
+        <audio id="audioPlayer" controls>
+            <source src="song.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <script>
+        const audioPlayer = document.getElementById('audioPlayer');
+
+        audioPlayer.addEventListener('ended', function() {
+            // Вашата логика за автоматично възпроизвеждане на следващата песен
+            // Например, може да промените атрибута src на audio елемента с новата песен
+            // и след това да извикате audioPlayer.play() за да започне автоматично възпроизвеждането
+        });
+    </script>
+</body>
+</html>
